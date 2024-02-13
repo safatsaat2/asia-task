@@ -1,0 +1,237 @@
+/* 
+Theme Name : asia-task-theme
+Theme URI: 
+Author: SAFAT
+Description: This theme is task for asia
+version: 1.0
+Tags: game, blog
+Text Domain: asia_task
+*/
+*{
+    box-sizing: border-box;
+    margin: 0  !important;
+}
+.navbar_background{
+    background-color: #000000 !important;
+    padding:20px 0px;
+}
+.navbar_background .navbar-logo a img{
+    width: 50px;
+    height: 50px;
+}
+.navbar_background .menu_box{
+    flex-wrap: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar_background .container-fluid{
+    padding: 0 120px ;
+}
+.navbar_background .navbar_background .navbar .navbar-collapse{
+    display: flex !important;
+    justify-content: center !important;
+}
+.navbar_background .nav-item{
+    padding: 4px 20px;
+}
+.navbar_background .nav-item a{
+    font-family: 'Tilt Warp', sans-serif;
+    color: #fff !important;
+    font-size: 1.06rem !important;
+    line-height: 1.8 !important;
+    letter-spacing: .02em !important;
+    text-transform: uppercase;
+}
+.navbar_background .nav-item .nav-link{
+    position: relative;
+}
+.navbar_background .nav-item .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 5px;
+    background-color: #ffffff;
+    transition: all 0.3s ease-out;}
+    .navbar_background .nav-item .nav-link:hover::before, .navbar_background .nav-item .nav-link:focus::before {
+        width: 100%;
+    }
+    .navbar_background .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+    .navbar_background .offcanvas_box .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: transparent !important;
+    }
+    .navbar_background .offcanvas_box .btn_offcanvas {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        background: transparent !important;
+    }
+    
+.navbar_background .hamburger span{
+    display: block;
+    width: 20px;
+    border-bottom: 1px solid #fff;
+}
+.navbar_background .btn_offcanvas .hamburger span{
+    display: block;
+    width: 40px;
+    border-bottom: 1px solid #fff;
+}
+
+.hero_area{
+    background: #000000;
+    padding: 60px;
+}
+.hero_area .background_image_wrapper{
+    height: 90vh;
+    background-size: cover;
+    padding: 60px;
+    display: flex;
+    align-items: end;
+    position: relative;
+}
+.hero_area .hero-content-wrapper{
+margin-top: auto;
+}
+.hero_area .hero-content-wrapper h2{
+        font-family: 'Tilt Warp', sans-serif;
+        font-size: 3.44rem;
+        line-height: 60px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+.hero_area .hero-content-wrapper p{
+        font-family: 'Tilt Warp', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    letter-spacing: normal;
+    }
+
+.hero_area .btn-primary-outline{
+    border: 2px solid transparent !important;
+    outline: 1px solid #ffffff;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 70px;
+    color: #fff;
+    position: relative;
+    font-family: 'Tilt Warp', sans-serif;
+    font-size: 1.06rem;
+    line-height: 1.8;
+    letter-spacing: .02em;
+}
+.hero_area .btn-primary-outline:hover{
+    box-shadow: inset 0 -100px 0 0 #ffffff
+}
+.hero_area .btn-primary-outline::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 5px;
+    width: 100%;
+    background-color: #ffffff;
+    transition: all 0.3s ease-in-out;
+}
+.hero_area .mbr-overlay{
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.creation_sec{
+    padding: 80px 0;
+    background: #000;
+}
+.creation_sec .creation_card_pr{
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 0 120px;
+    align-items: end;
+}
+.creation_sec .creation_card_child{
+    width: 100%;
+}
+.creation_sec .creation_card_child{
+    display: block;
+}
+.creation_sec .sm_heading{
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.67;
+    letter-spacing: normal;
+    font-family: 'Tilt Warp', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 18px !important;
+}
+
+
+.creation_sec .lg_heading{
+    font-family: 'Tilt Warp', sans-serif;
+    font-size: 2rem;
+    line-height: 1.16em;
+    text-transform: uppercase;
+    color: #fff;
+    margin-bottom: 18px !important;
+}
+.creation_sec .creation_des{
+    color: #cacaca;
+    font-family: 'Golos Text', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.67;
+    letter-spacing: normal;
+}
+.creation_sec .creation_card_pr .creation_card_child a{
+    height: 100%;
+    position: relative;
+    display: block;
+}
+.creation_sec .creation_card_pr a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    pointer-events: none;
+    z-index: 1;
+}
+.creation_sec .creation_card_pr a:hover::before {
+    opacity: .65;
+}
+.creation_sec .creation_card_pr a img{
+    max-width: 530px;
+    position: relative;
+    height: 450px;
+    object-fit: cover;
+    border: 1px solid #ffffff;
+    pointer-events: visible;
+}
+@media (max-width: 1024px){
+    .offcanvas_box{
+        display: none;
+    }
+    .srs_responsive{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
