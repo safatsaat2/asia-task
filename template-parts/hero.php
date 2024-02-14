@@ -13,7 +13,7 @@ $hero_header = get_post_meta(get_the_ID(), 'Hero Header', true);
     <p>
     Today's modern gaming industry is a multi-billion dollar business,
     <br>
-with new technologies constantly pushing the boundaries of what's possible.
+    with new technologies constantly pushing the boundaries of what's possible.
     </p>
     <a class="btn btn-primary-outline display-4" href="#">
                             VIEW MORE
