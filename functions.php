@@ -5,6 +5,9 @@ if (site_url() == "http://localhost/wordpress/home-page") {
     define("VERSION", wp_get_theme()->get("Version"));
 }
 
+
+
+// This function enqueues necessary stylesheets and scripts.
 function asia_task_assets()
 {
     wp_enqueue_style("localStyle", get_stylesheet_uri(), null, VERSION);
@@ -19,6 +22,8 @@ function asia_task_assets()
 add_action("wp_enqueue_scripts", "asia_task_assets");
 
 
+
+// Initialize theme features and settings .
 function asia_task_bootraping()
 {
     register_nav_menu("topmenu", __("Top Menu", "asia_task"));
@@ -37,6 +42,8 @@ function asia_task_bootraping()
 }
 add_action("after_setup_theme", "asia_task_bootraping");
 
+
+// This function adds the 'nav-item' CSS class to each navigation menu item
 function custom_nav_menu_css_class($classes, $item, $args, $depth)
 {
     $classes[] = 'nav-item';
@@ -75,6 +82,11 @@ function firstSrsTheme_about_page_template_banner()
 }
 
 add_action("wp_head", "firstSrsTheme_about_page_template_banner", 11);
+
+
+
+
+// This function registers a custom post type team.
 function custom_team()
 {
     register_post_type(
@@ -107,10 +119,13 @@ function custom_team()
 };
 
 add_action("init", "custom_team");
+
+
+// This function registers a custom post type custom posts.
 function custom_post()
 {
     register_post_type(
-        "custom posts",
+        "custom_posts",
         array(
             'labels' => array(
                 'name' => ("Custom Posts"),
@@ -136,10 +151,28 @@ function custom_post()
         )
 
     );
+    register_taxonomy(
+        'categories',
+        'custom_posts',
+        array(
+            'label' => __('Categories'),
+            'hierarchical' => true,
+            'public' => true,
+            'show_ui' => true,
+            'show_in_nav_menus' => true,
+            'show_admin_column' => true,
+            'rewrite' => array('slug' => 'categories'),
+        )
+    );
 };
 
 add_action("init", "custom_post");
 
+
+
+
+
+// This function registers multiple custom widget areas for various sections
 function asia_task_widget(){
     
     register_sidebar(

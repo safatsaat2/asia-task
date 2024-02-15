@@ -8,9 +8,7 @@
                 if (current_theme_supports("custom-logo")) {
                     the_custom_logo();}
                 ?>
-                
-                        
-                
+                    
                     </a>
                 </span>
                 

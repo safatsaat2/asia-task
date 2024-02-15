@@ -11,6 +11,8 @@ $creation_header = get_post_meta(get_the_ID(), 'Creation Header', true);
                 <?php
                 if (is_active_sidebar("creation-section-left-description")) {
                     dynamic_sidebar("creation-section-left-description");
+                }else{
+                    echo '<h1>Add Text</h1>';
                 }; ?>
                 </div>
         </div>
@@ -19,6 +21,8 @@ $creation_header = get_post_meta(get_the_ID(), 'Creation Header', true);
                 <?php
                 if (is_active_sidebar("creation-section-left-photo")) {
                     dynamic_sidebar("creation-section-left-photo");
+                }else{
+                    echo '<img src="https://i.postimg.cc/6QMhx45P/Frame-1000004141.png" alt="">';
                 }; ?>
             </a>
         </div>
@@ -27,6 +31,8 @@ $creation_header = get_post_meta(get_the_ID(), 'Creation Header', true);
                 <?php
                 if (is_active_sidebar("creation-section-right-photo")) {
                     dynamic_sidebar("creation-section-right-photo");
+                }else{
+                    echo '<img src="https://i.postimg.cc/6QMhx45P/Frame-1000004141.png" alt="">';
                 }; ?>
             </a>
         </div>
